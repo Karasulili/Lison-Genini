@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISON GENINI - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+        body {
+            font-family: 'EB Garamond', serif;
+            margin: 0;
+            background-color: #FFFEF1;
+            color: #000000;
+            line-height: 1.8;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #FFFEF1;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #2b2b2b;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #6b6b6b;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .project {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #FFFEF1;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+        .project video {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        .project img {
+            width: 90%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        .project img.small {
+            width: 50%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        .project img.side-by-side {
+            width: 49%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .project.left {
+            text-align: left;
+        }
+
+        .project.center img {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .project h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #2b2b2b;
+        }
+
+        .project p {
+            font-size: 1.1rem;
+            color: #5a5a5a;
+        }
+
+        .cartel {
+            font-size: 0.9rem;
+            color: #4b4b4b;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .audio-section {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .audio-section audio {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            outline: none;
+        }
+        .mosaic-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .mosaic-gallery img {
+           width: 100%;
+           height: auto;
+           border-radius: 8px;
+           object-fit: cover;
+         }
+        
+
+.pinterest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adapte la largeur des colonnes */
+    gap: 16px; /* Espacement entre les images */
+    padding: 16px;
+}
+
+.pinterest-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.pinterest-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajuste les images sans distorsion */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pinterest-item img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.masonry-grid {
+    column-count: 4; /* Nombre de colonnes */
+    column-gap: 16px; /* Espacement horizontal entre les colonnes */
+    padding: 16px;
+}
+
+.masonry-item {
+    margin-bottom: 16px; /* Espacement vertical entre les images */
+    break-inside: avoid; /* Empêche les coupures entre les colonnes */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.masonry-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.masonry-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1200px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+}
+
+
+        footer {
+            background-color: #FFFEF1;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #6b6b6b;
+        }
+
+        footer a {
+            color: #2b2b2b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LISON GENINI</h1>
+        <p>" This place unfolds in the in-between: between the tangible and the ephemeral, between matter and the intangible. Each becomes an attempt to make this elusive balance perceptible, this state of flow, of suspension. "</p>
+    </header>
+
+    <div class="audio-section">
+        <h2>SOUDSCAPE</h2>
+        <p>"La naissance des méduses de fer"</p>
+        <audio controls>
+            <source src="lison1_export_stéréo.mp3" type="audio/mpeg">
+            Votre navigateur ne prend pas en charge le lecteur audio.
+        </audio>
+    </div>
+
+    <div class="container">
+        <div class="project">
+            <img src="DSC_3385.JPG" alt="Vestige Drapeau en Tissu">
+            <img class="side-by-side" src="DSC_3374.JPG" alt="Vestige Drapeau en Tissu">
+            <img class="side-by-side" src="typo meduse.jpg" alt="Vestige Drapeau en Tissu">
+            <h2>CREATURES AND REMNANTS</h2>
+            <p>This project takes the form of a textile flag, a vestige of an imaginary civilisation in which extraterrestrial jellyfish played a central role. Through drawings, pictograms and an enigmatic typography, this work questions the transmission and erasure of cultures.  
+
+                The fabric, deliberately marked by time, becomes a narrative surface where each motif symbolises hypothetical narratives: interstellar migrations, bioluminescent networks and alliances between species. This flag, at the crossroads of myth and science fiction, invites us to speculate on alternative modes of communication and existence.  
+                
+                Both a poetic and anthropological representation, the work embodies the fragility and persistence of memories in an ever-changing universe. </p>
+            <div class="cartel">"Untilted", fabric painting, typography and pictograms, ESAL, 2025, 90x130 cm</div>
+        </div>
+
+        <div class="project">
+            <img src="DSC_2299.JPG" alt="Iron-Legged Jellyfish">
+            <h2>IRON-LEGGED JELLYFISH</h2>
+            <p>The iron-legged jellyfish embody a dense and poetic fictional universe, the fruit of around a hundred experiments. This project explores the construction of a complete civilisation: species, means of communication, languages, writing, and even modes of reproduction and development.
+
+                The volumetric rendering conveys the fragile, icy essence of these imaginary creatures. The structures evoke a wandering that is both beautiful and painful, resonating with the state of flow. Their materiality combines lightness and density, between transparency and rust, underlining their duality: beings that are both ephemeral and mechanical, fragile and resilient.
+                
+                These creations are part of a reflection on the creation of imaginary ecosystems and the link between fiction and organic sensibility.</p>
+            <div class="cartel">"Jambes de fer", porcelain and iron lines, ESAL, 2024, 50x120x40 cm</div>
+        </div>
+
+        <div class="project">
+            <img class="side-by-side" src="DSC_9982.png" alt="Recto Verso">
+            <img class="side-by-side" src="DSC_9980.png" alt="Recto Verso">
+            <h2>RECTO VERSO</h2>
+            <p>This textile experiment explores the natural phenomena of erosion and capillarity through the application of paint on fabric. The coloured flows created by the interaction between the material and the liquid mimic the dynamics of water infiltrating soil or stone.
+
+                Each trace, the result of an unpredictable process, reveals an organic aesthetic in which notions of control and chance intertwine. This work, at once technical and poetic, opens up avenues for reflection on the transformation of materials and the way in which natural forces sculpt our environment. As an essay, this piece provides a platform for future developments, exploring dialogues between matter, process and temporality.</p>
+            <div class="cartel">"OVB", fabric painting, ISBA, 2023, 250x320 cm</div>
+        </div>
+        
+        <div class="project">
+            <img class="small" src="20240328_122237 (1).jpg" alt="Garden Floor">
+            <h2>EROSION</h2>
+            <p>
+                This series of four fabrics reflects on traces and the passage of time, combining capillarity, gravity and the interaction between liquid and matter. Through layers of juice of varying transparency, the fabrics reveal the imprints of objects, movements on the floor and folds, evidence of a silent dialogue between tool, surface and environment.  
+
+Each piece captures the action of the liquid that shapes the fabric, revealing unpredictable, organic patterns. The accumulated strata evoke a constantly evolving temporality, where the material works autonomously to reveal poetic and sensitive compositions.  
+
+These experiments open up perspectives on how natural processes and human gestures come together to generate unique visual narratives.  </p>
+            <div class="cartel">"Garden Floor", fabric painting, ISBA, 2024, 270x300 cm</div>
+        </div>
+        
+        <div class="project">
+            <video controls>
+                <source src="Clip  15.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2>CYANOCLIP</h2>
+            <p>It's a video performance in which gesture and material interact to reveal imaginary marine forms inspired by limestone chancels. Through a layered approach, the cyanotype becomes a terrain for experimentation: paint, drawing gum and superimpositions intermingle, each stage contributing to the construction of a hybrid universe.  This is a series of around fifty experiments.
+
+                The performance withdrawal of the drawing gum, captured on video, reveals residues and traces that bear witness to the process. These fragments, both ephemeral and essential, embody the interplay between control and accident.  
+                
+                In this production, cyanotype is not just a technique, but a tool for materialising an imaginary aquatic bestiary. *Cyanoclip* questions transformation, imprinting and the poetry of repeated gestures.
+                
+                Translated with DeepL.com (free version)</p>
+            <div class="cartel">"Residu du cyanoclip", video performance, gum and inks, ESAL, 2024, 75x105 cm  </div>
+        </div>
+    </div>
+
+
+    <div class="project">
+        <h2>GALLERY</h2>
+        <p>A collection of experimental</p>
+        <div class="masonry-grid">
+            <div class="masonry-item"><img src="DSC_2264.jpg" alt="Gallery Image 1"></div>
+            <div class="masonry-item"><img src="DSC06914.jpg" alt="Gallery Image 2"></div>
+            <div class="masonry-item"><img src="DSC06930.jpg" alt="Gallery Image 3"></div>
+            <div class="masonry-item"><img src="DSC06922.jpg" alt="Gallery Image 4"></div>
+            <div class="masonry-item"><img src="DSC_2272.jpg" alt="Gallery Image 5"></div>
+            <div class="masonry-item"><img src="DSC_2276.jpg" alt="Gallery Image 6"></div>
+            <div class="masonry-item"><img src="DSC_2295.jpg" alt="Gallery Image 7"></div>
+            <div class="masonry-item"><img src="20241114_170630 (1).jpg" alt="Gallery Image 8"></div>
+            <div class="masonry-item"><img src="20241114_170622.jpg" alt="Gallery Image 9"></div>
+            <div class="masonry-item"><img src="DSC_0565.png" alt="Gallery Image 10"></div>
+            <div class="masonry-item"><img src="DSC_3384.jpg" alt="Gallery Image 13"></div>
+            <div class="masonry-item"><img src="DSC_3386.jpg" alt="Gallery Image 14"></div>
+            <div class="masonry-item"><img src="Image (7).jpg" alt="Gallery Image 16"></div>
+            <div class="masonry-item"><img src="IMG_20231206_180807_568.png" alt="Gallery Image 17"></div>
+            <div class="masonry-item"><img src="IMG_20231206_174916_789.png" alt="Gallery Image 18"></div>
+            <div class="masonry-item"><img src="Image (16).jpg" alt="Gallery Image 19"></div>
+            <div class="masonry-item"><img src="IMG_20231206_180807_498.png" alt="Gallery Image 22"></div>
+            <div class="masonry-item"><img src="IMG_20231206_174916_705.png" alt="Gallery Image 23"></div>
+            <div class="masonry-item"><img src="jpglkjhoik.jpg" alt="Gallery Image 25"></div>
+            <div class="masonry-item"><img src="lili.jpg" alt="Gallery Image 26"></div>
+            <div class="masonry-item"><img src="jtgi.png" alt="Gallery Image 27"></div>
+            <div class="masonry-item"><img src="ttggt.png" alt="Gallery Image 28"></div>
+            <div class="masonry-item"><img src="DSC_0659.jpg " alt="Gallery Image 29"></div>
+            <div class="masonry-item"><img src="20241021_202348.jpg" alt="Gallery Image 30"></div>
+            <div class="masonry-item"><img src="DSC_0654.jpg" alt="Gallery Image 31"></div>
+            <div class="masonry-item"><img src="20241021_202359.jpg" alt="Gallery Image 32"></div>
+           
+            
+
+        </div>       
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lison Genini - lison.genini0@gmail.com</p>
+    </footer>
+</body>
+</html>
